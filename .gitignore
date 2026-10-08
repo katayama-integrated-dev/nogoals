@@ -1,0 +1,15 @@
+# Lake build artifacts
+.lake/
+build/
+
+# Editor files
+.vscode/
+*.swp
+*~
+
+# OS files
+.DS_Store
+atp_files/
+
+# agent scratch
+.claude/

@@ -1,0 +1,44 @@
+/* Minimal stylesheet for the NoGoals scaffold. Every class NoGoals's chrome emits and
+   every class the template's blocks emit is defined here — the CSS-contract
+   gate fails on any class no stylesheet defines, so add a rule when you add
+   a class. */
+:root{--ink:#0f172a;--muted:#475569;--accent:#1d4ed8;--bg:#fff;--card:#f1f5f9}
+*{box-sizing:border-box;margin:0;padding:0}
+.site-body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.container-wide{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+.site-header{border-bottom:1px solid var(--card)}
+.nav-container{display:flex;align-items:center;gap:1.5rem;padding:.75rem 1.25rem}
+.nav-brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:inherit}
+.brand-logo-image{width:2rem;height:2rem}
+.brand-name{font-weight:600}
+.nav-links{display:flex;gap:1rem;list-style:none;margin-left:auto}
+.nav-link{color:inherit;text-decoration:none}
+.nav-link[aria-current]{text-decoration:underline;text-underline-offset:.3em}
+.nav-menu{position:relative;margin-left:auto}
+.nav-menu summary{cursor:pointer}
+.nav-menu-list{position:absolute;right:0;list-style:none;background:var(--bg);border:1px solid var(--card);padding:.5rem 1rem}
+@media (min-width:40rem){.nav-menu{display:none}}
+@media (max-width:39.99rem){.nav-links{display:none}}
+.skip-link{position:absolute;left:1rem;top:.5rem;padding:.4rem .8rem;background:var(--bg);transform:translateY(-200%)}
+.skip-link:focus{transform:none}
+.language-switcher{font-size:.9rem}
+.language-link{color:var(--muted)}
+.hero{padding:4rem 0;background-size:cover;background-position:center;color:#fff}
+.hero-with-image{background-color:var(--ink)}
+.hero-img-default{background-image:url("/assets/images/hero.png")}
+.hero-inner{display:flex}
+.hero-copy h1{font-size:2rem;margin-bottom:.5rem}
+.hero-lead{font-size:1.1rem;opacity:.9}
+.section{padding:3rem 0}
+.section-heading{font-size:1.4rem;margin-bottom:1rem}
+.prose{max-width:40rem}
+.prose p{margin-bottom:1rem}
+.cta-row{margin-top:1.5rem}
+.button{display:inline-block;padding:.6rem 1.2rem;background:var(--accent);color:#fff;border-radius:.4rem;text-decoration:none}
+.site-footer{border-top:1px solid var(--card);padding:2rem 0;color:var(--muted);font-size:.9rem}
+.footer-nav{display:flex;gap:1rem;margin:.75rem 0}
+.footer-nav a{color:inherit}
+.verification-badge{margin-top:1rem}
+.verification-badge-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--accent);text-decoration:none}
+.verification-badge-check{font-weight:700}
+.verification-badge-text{font-size:.85rem}

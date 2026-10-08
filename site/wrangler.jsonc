@@ -1,0 +1,20 @@
+{
+  // nogoals.org — the audited build/ served as Workers static assets
+  // (Cloudflare Pages runs on Workers now). `deploy/deploy.sh` is the only
+  // path that should run `wrangler` against this file: it refuses anything
+  // but a green full-audit receipt, verifies a preview upload byte for byte
+  // against the manifest, and only then promotes.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nogoals",
+  "compatibility_date": "2026-09-18",
+  "assets": {
+    "directory": "./build",
+    // Cloudflare Pages serving rules, which the link gate models: /x/ ↦ x/index.html.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  // Keep the workers.dev route too: it is the preview hostname and the
+  // fallback while the custom domain is not attached.
+  "workers_dev": true,
+  "routes": [{ "pattern": "nogoals.org", "custom_domain": true }]
+}

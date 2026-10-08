@@ -1,0 +1,9 @@
+{
+  "name": "my-site",
+  "private": true,
+  "engines": { "node": "^22.22.0 || >=24.8.0" },
+  "devDependencies": {
+    "html-validate": "11.16.0",
+    "parse5": "8.0.1"
+  }
+}

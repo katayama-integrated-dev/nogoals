@@ -1,0 +1,7 @@
+.lake/
+lake-manifest.json
+node_modules/
+build/
+build.staging/
+build.failed/
+build.previous/

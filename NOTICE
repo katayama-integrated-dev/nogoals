@@ -1,0 +1,31 @@
+NoGoals
+Copyright (c) 2026 片山総合開発合同会社 / Katayama Integrated Development LLC
+Licensed under the Apache License, Version 2.0; see LICENSE.
+
+NoGoals does not vendor third-party code. It builds against the components
+below, which are fetched at build time at the versions pinned in this
+repository. Each is distributed under its own license.
+
+Lean toolchain (pinned in lean-toolchain)
+  Lean 4 v4.28.0                      Apache-2.0   https://github.com/leanprover/lean4
+
+Lean packages (pinned in lakefile.lean and lake-manifest.json)
+  Mathlib                             Apache-2.0   https://github.com/leanprover-community/mathlib4
+  and Mathlib's own dependencies:
+  Batteries                           Apache-2.0   https://github.com/leanprover-community/batteries
+  Aesop                               Apache-2.0   https://github.com/leanprover-community/aesop
+  Qq                                  Apache-2.0   https://github.com/leanprover-community/quote4
+  ProofWidgets                        Apache-2.0   https://github.com/leanprover-community/ProofWidgets4
+  Plausible                           Apache-2.0   https://github.com/leanprover-community/plausible
+  LeanSearchClient                    Apache-2.0   https://github.com/leanprover-community/LeanSearchClient
+  importGraph                         Apache-2.0   https://github.com/leanprover-community/import-graph
+  Cli                                 MIT          https://github.com/leanprover/lean4-cli
+
+Node packages (pinned in site/package-lock.json and
+skills/nogoals/assets/package-lock.json)
+  html-validate 11.16.0               MIT          https://html-validate.org
+  parse5 8.0.1                        MIT          https://parse5.js.org
+  wrangler 4.135.0 (site/ only)       MIT OR Apache-2.0
+                                                   https://github.com/cloudflare/workers-sdk
+  Their transitive dependencies are recorded, with licenses, in the same
+  lockfiles.

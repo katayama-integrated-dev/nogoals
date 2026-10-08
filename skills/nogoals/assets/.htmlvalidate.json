@@ -1,0 +1,4 @@
+{
+  "extends": ["html-validate:standard"],
+  "rules": { "void-style": "off", "no-trailing-whitespace": "off" }
+}
